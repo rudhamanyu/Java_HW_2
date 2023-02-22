@@ -1,3 +1,4 @@
+//4*. К калькулятору из предыдущего дз добавить логирование.
 package org.example;
 
 import java.io.IOException;

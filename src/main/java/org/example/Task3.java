@@ -1,3 +1,11 @@
+//3* . Дана json строка (можно сохранить в файл и читать из файла)
+//[{"фамилия":"Иванов","оценка":"5","предмет":"Математика"},{"фамилия":"Петрова","оценка":"4","предмет":"Информатика"},{"фамилия":"Краснов","оценка":"5","предмет":"Физика"}]
+//Написать метод(ы), который распарсит json и, используя StringBuilder, создаст строки вида: Студент [фамилия] получил [оценка] по предмету [предмет].
+//Пример вывода:
+//Студент Иванов получил 5 по предмету Математика.
+//Студент Петрова получил 4 по предмету Информатика.
+// Студент Краснов получил 5 по предмету Физика.
+
 package org.example;
 
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -12,7 +20,7 @@ public class Task3 {
         JsonMapper jsonMapper = new JsonMapper();
         List<Map<String, String>> students =
                 jsonMapper.readValue(new File("src/main/resources/Task3.json"),
-                        new TypeReference<List<Map<String, String>>>() {
+                        new TypeReference<>() {
                         });
         StringBuilder sb = new StringBuilder();
         for (Map<String, String> student : students) {
