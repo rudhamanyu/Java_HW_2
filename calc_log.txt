@@ -1,0 +1,2 @@
+февр. 22, 2023 7:23:02 PM org.example.Task4 main
+INFO: Результат: 4
